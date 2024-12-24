@@ -1,1 +1,1 @@
-scp -r ./test.c pp24@202.38.86.20:~/students/BZ24218003/repo
+scp -r ./* pp24@202.38.86.20:~/students/BZ24218003/repo

@@ -1,6 +1,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <mpi/mpi.h>
+
+#define MAX_SIZE 256
+
 int main(void)
 {
     MPI_Init(NULL, NULL);
@@ -13,7 +16,7 @@ int main(void)
     printf("Number of task=%d, My rank=%d Running on %s.\n", size, rank, hostName);
 
     // all gather 所有进程的名称
-    char all_hostnames[size][len];
+    char all_hostnames[size][MAX_SIZE];
     MPI_Allgather(hostName, len, MPI_CHAR,
                   all_hostnames, len, MPI_CHAR, MPI_COMM_WORLD);
 
