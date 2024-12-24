@@ -1,0 +1,5 @@
+CompileFlags:                     # Tweak the parse settings
+    Add:
+    - -std=c99
+    - "-I/"
+    Compiler: mpicc
