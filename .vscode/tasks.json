@@ -10,7 +10,8 @@
                 "${file}",
                 "-o",
                 "${workspaceFolder}/build/${fileBasenameNoExtension}",
-                "-std=c99"
+                "-std=c99",
+                "-lm"
             ],
             "group": {
                 "kind": "build",
